@@ -11,7 +11,6 @@
 		959361881F9FDBA600410C5E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 959361861F9FDBA600410C5E /* Info.plist */; };
 		959361891F9FDBA600410C5E /* MetaMergeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959361871F9FDBA600410C5E /* MetaMergeUITests.swift */; };
 		95BD76CF1F7B1957009AE6A4 /* VOCJSONDecoderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD76CE1F7B1957009AE6A4 /* VOCJSONDecoderTest.swift */; };
-		95C8E0311F992EFA004551E9 /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C8E0251F992EA7004551E9 /* Gloss.framework */; };
 		95C8E0361F9A1D88004551E9 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8E0341F9A1D88004551E9 /* Resource.swift */; };
 		95C8E04B1F9A1E04004551E9 /* lepage-170604-DGP-9916.json in Resources */ = {isa = PBXBuildFile; fileRef = 95C8E0481F9A1E04004551E9 /* lepage-170604-DGP-9916.json */; };
 		95C8E04C1F9A1E04004551E9 /* lepage-170604-DGP-9916.json in Resources */ = {isa = PBXBuildFile; fileRef = 95C8E0481F9A1E04004551E9 /* lepage-170604-DGP-9916.json */; };
@@ -36,47 +35,40 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		95C8E0241F992EA7004551E9 /* PBXContainerItemProxy */ = {
+		953D42AE1FA016BA00192CAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 95C8DFE41F992EA6004551E9 /* Gloss.xcodeproj */;
+			containerPortal = 953D42A61FA016BA00192CAD /* Gloss.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = DC39BF611B8A7AD200088CE0;
 			remoteInfo = Gloss;
 		};
-		95C8E0261F992EA7004551E9 /* PBXContainerItemProxy */ = {
+		953D42B01FA016BA00192CAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 95C8DFE41F992EA6004551E9 /* Gloss.xcodeproj */;
+			containerPortal = 953D42A61FA016BA00192CAD /* Gloss.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = DCF3008A1BDCA3FF003FBF15;
 			remoteInfo = "Gloss MacOS";
 		};
-		95C8E0281F992EA7004551E9 /* PBXContainerItemProxy */ = {
+		953D42B21FA016BA00192CAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 95C8DFE41F992EA6004551E9 /* Gloss.xcodeproj */;
+			containerPortal = 953D42A61FA016BA00192CAD /* Gloss.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A04168E71C0DF69900269A6A;
 			remoteInfo = "Gloss tvOS";
 		};
-		95C8E02A1F992EA7004551E9 /* PBXContainerItemProxy */ = {
+		953D42B41FA016BA00192CAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 95C8DFE41F992EA6004551E9 /* Gloss.xcodeproj */;
+			containerPortal = 953D42A61FA016BA00192CAD /* Gloss.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = DC683ADB1C2C615D0035EAC3;
 			remoteInfo = "Gloss watchOS";
 		};
-		95C8E02C1F992EA7004551E9 /* PBXContainerItemProxy */ = {
+		953D42B61FA016BA00192CAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 95C8DFE41F992EA6004551E9 /* Gloss.xcodeproj */;
+			containerPortal = 953D42A61FA016BA00192CAD /* Gloss.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2FA4CE9A1C947E3000EB8AB8;
 			remoteInfo = GlossTests;
-		};
-		95C8E02F1F992EA7004551E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 95C8DFF51F992EA6004551E9 /* GlossExample.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9C12015D1D12D723004FD72C;
-			remoteInfo = GlossExample;
 		};
 		95FB5D0A1F603D9000628D43 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -96,61 +88,11 @@
 
 /* Begin PBXFileReference section */
 		952135701F97E72300F0226A /* VOCXMLParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VOCXMLParserTests.swift; sourceTree = "<group>"; };
+		953D42A61FA016BA00192CAD /* Gloss.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Gloss.xcodeproj; path = ../../work/Gloss2/Gloss/Gloss.xcodeproj; sourceTree = "<group>"; };
 		9541B4671F97DEB400ACD4BF /* lepage-170604-DGP-9916.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lepage-170604-DGP-9916.jpg"; sourceTree = "<group>"; };
 		959361861F9FDBA600410C5E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		959361871F9FDBA600410C5E /* MetaMergeUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaMergeUITests.swift; sourceTree = "<group>"; };
 		95BD76CE1F7B1957009AE6A4 /* VOCJSONDecoderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOCJSONDecoderTest.swift; sourceTree = "<group>"; };
-		95C8DFDE1F992EA6004551E9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		95C8DFDF1F992EA6004551E9 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
-		95C8DFE01F992EA6004551E9 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
-		95C8DFE11F992EA6004551E9 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
-		95C8DFE21F992EA6004551E9 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
-		95C8DFE31F992EA6004551E9 /* Gloss.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gloss.podspec; sourceTree = "<group>"; };
-		95C8DFE41F992EA6004551E9 /* Gloss.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Gloss.xcodeproj; sourceTree = "<group>"; };
-		95C8DFE91F992EA6004551E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		95C8DFEB1F992EA6004551E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		95C8DFED1F992EA6004551E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		95C8DFEE1F992EA6004551E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		95C8DFEF1F992EA6004551E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95C8DFF01F992EA6004551E9 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
-		95C8DFF11F992EA6004551E9 /* RepoOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoOwner.swift; sourceTree = "<group>"; };
-		95C8DFF31F992EA6004551E9 /* gloss_logo_tagline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gloss_logo_tagline.png; sourceTree = "<group>"; };
-		95C8DFF41F992EA6004551E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		95C8DFF51F992EA6004551E9 /* GlossExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = GlossExample.xcodeproj; sourceTree = "<group>"; };
-		95C8DFF81F992EA6004551E9 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		95C8DFF91F992EA6004551E9 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		95C8DFFA1F992EA6004551E9 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		95C8DFFB1F992EA6004551E9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		95C8DFFD1F992EA6004551E9 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
-		95C8DFFE1F992EA6004551E9 /* Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
-		95C8DFFF1F992EA6004551E9 /* ExtensionArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionArray.swift; sourceTree = "<group>"; };
-		95C8E0001F992EA6004551E9 /* ExtensionDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDecodable.swift; sourceTree = "<group>"; };
-		95C8E0011F992EA6004551E9 /* ExtensionDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDictionary.swift; sourceTree = "<group>"; };
-		95C8E0021F992EA6004551E9 /* Gloss.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gloss.h; sourceTree = "<group>"; };
-		95C8E0031F992EA6004551E9 /* Gloss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gloss.swift; sourceTree = "<group>"; };
-		95C8E0041F992EA6004551E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95C8E0051F992EA6004551E9 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
-		95C8E0081F992EA6004551E9 /* Comparators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparators.swift; sourceTree = "<group>"; };
-		95C8E0091F992EA6004551E9 /* DecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTests.swift; sourceTree = "<group>"; };
-		95C8E00A1F992EA6004551E9 /* EncoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoderTests.swift; sourceTree = "<group>"; };
-		95C8E00C1F992EA6004551E9 /* FakeLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeLogger.swift; sourceTree = "<group>"; };
-		95C8E00D1F992EA6004551E9 /* FlowObjectCreationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowObjectCreationTests.swift; sourceTree = "<group>"; };
-		95C8E00E1F992EA6004551E9 /* GlossTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossTests.swift; sourceTree = "<group>"; };
-		95C8E00F1F992EA6004551E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95C8E0101F992EA6004551E9 /* KeyPathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPathTests.swift; sourceTree = "<group>"; };
-		95C8E0111F992EA6004551E9 /* ObjectToJSONFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectToJSONFlowTests.swift; sourceTree = "<group>"; };
-		95C8E0121F992EA6004551E9 /* OperatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorTests.swift; sourceTree = "<group>"; };
-		95C8E0141F992EA6004551E9 /* TestFailableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFailableModel.swift; sourceTree = "<group>"; };
-		95C8E0151F992EA6004551E9 /* TestFailableModelInvalid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestFailableModelInvalid.json; sourceTree = "<group>"; };
-		95C8E0161F992EA6004551E9 /* TestFailableModelValid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestFailableModelValid.json; sourceTree = "<group>"; };
-		95C8E0171F992EA6004551E9 /* TestKeyPathModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestKeyPathModel.swift; sourceTree = "<group>"; };
-		95C8E0181F992EA6004551E9 /* TestKeyPathModelCustomDelimiter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestKeyPathModelCustomDelimiter.swift; sourceTree = "<group>"; };
-		95C8E0191F992EA6004551E9 /* TestModel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestModel.json; sourceTree = "<group>"; };
-		95C8E01A1F992EA6004551E9 /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
-		95C8E01B1F992EA6004551E9 /* TestNestedKeyPathModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNestedKeyPathModel.swift; sourceTree = "<group>"; };
-		95C8E01C1F992EA6004551E9 /* TestNestedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNestedModel.swift; sourceTree = "<group>"; };
-		95C8E01D1F992EA6004551E9 /* TestUnknownTypeModel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestUnknownTypeModel.json; sourceTree = "<group>"; };
-		95C8E01E1F992EA6004551E9 /* TestUnknownTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUnknownTypeModel.swift; sourceTree = "<group>"; };
 		95C8E0341F9A1D88004551E9 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		95C8E0481F9A1E04004551E9 /* lepage-170604-DGP-9916.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lepage-170604-DGP-9916.json"; sourceTree = "<group>"; };
 		95C8E0491F9A1E04004551E9 /* lepage-170604-DGP-9916.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "lepage-170604-DGP-9916.xml"; sourceTree = "<group>"; };
@@ -175,7 +117,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95C8E0311F992EFA004551E9 /* Gloss.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +137,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		953D42A71FA016BA00192CAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				953D42AF1FA016BA00192CAD /* Gloss.framework */,
+				953D42B11FA016BA00192CAD /* Gloss.framework */,
+				953D42B31FA016BA00192CAD /* Gloss.framework */,
+				953D42B51FA016BA00192CAD /* Gloss.framework */,
+				953D42B71FA016BA00192CAD /* GlossTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9541B4631F97DE0D00ACD4BF /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,152 +162,9 @@
 		95BD76E51F7B1F67009AE6A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				95C8DFDD1F992EA6004551E9 /* Gloss */,
+				953D42A61FA016BA00192CAD /* Gloss.xcodeproj */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		95C8DFDD1F992EA6004551E9 /* Gloss */ = {
-			isa = PBXGroup;
-			children = (
-				95C8DFDE1F992EA6004551E9 /* .gitignore */,
-				95C8DFDF1F992EA6004551E9 /* .swift-version */,
-				95C8DFE01F992EA6004551E9 /* .travis.yml */,
-				95C8DFE11F992EA6004551E9 /* CHANGELOG.md */,
-				95C8DFE21F992EA6004551E9 /* Gemfile */,
-				95C8DFE31F992EA6004551E9 /* Gloss.podspec */,
-				95C8DFE41F992EA6004551E9 /* Gloss.xcodeproj */,
-				95C8DFE71F992EA6004551E9 /* GlossExample */,
-				95C8DFF91F992EA6004551E9 /* LICENSE */,
-				95C8DFFA1F992EA6004551E9 /* Package.swift */,
-				95C8DFFB1F992EA6004551E9 /* README.md */,
-				95C8DFFC1F992EA6004551E9 /* Sources */,
-				95C8E0061F992EA6004551E9 /* Tests */,
-			);
-			name = Gloss;
-			path = ../Gloss2/Gloss;
-			sourceTree = "<group>";
-		};
-		95C8DFE51F992EA6004551E9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				95C8E0251F992EA7004551E9 /* Gloss.framework */,
-				95C8E0271F992EA7004551E9 /* Gloss.framework */,
-				95C8E0291F992EA7004551E9 /* Gloss.framework */,
-				95C8E02B1F992EA7004551E9 /* Gloss.framework */,
-				95C8E02D1F992EA7004551E9 /* GlossTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		95C8DFE71F992EA6004551E9 /* GlossExample */ = {
-			isa = PBXGroup;
-			children = (
-				95C8DFE81F992EA6004551E9 /* GlossExample */,
-				95C8DFF51F992EA6004551E9 /* GlossExample.xcodeproj */,
-				95C8DFF81F992EA6004551E9 /* Podfile */,
-			);
-			path = GlossExample;
-			sourceTree = "<group>";
-		};
-		95C8DFE81F992EA6004551E9 /* GlossExample */ = {
-			isa = PBXGroup;
-			children = (
-				95C8DFE91F992EA6004551E9 /* AppDelegate.swift */,
-				95C8DFEA1F992EA6004551E9 /* LaunchScreen.xib */,
-				95C8DFEC1F992EA6004551E9 /* Main.storyboard */,
-				95C8DFEE1F992EA6004551E9 /* Images.xcassets */,
-				95C8DFEF1F992EA6004551E9 /* Info.plist */,
-				95C8DFF01F992EA6004551E9 /* Repo.swift */,
-				95C8DFF11F992EA6004551E9 /* RepoOwner.swift */,
-				95C8DFF21F992EA6004551E9 /* Resources */,
-				95C8DFF41F992EA6004551E9 /* ViewController.swift */,
-			);
-			path = GlossExample;
-			sourceTree = "<group>";
-		};
-		95C8DFF21F992EA6004551E9 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				95C8DFF31F992EA6004551E9 /* gloss_logo_tagline.png */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		95C8DFF61F992EA6004551E9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				95C8E0301F992EA7004551E9 /* GlossExample.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		95C8DFFC1F992EA6004551E9 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				95C8DFFD1F992EA6004551E9 /* Decoder.swift */,
-				95C8DFFE1F992EA6004551E9 /* Encoder.swift */,
-				95C8DFFF1F992EA6004551E9 /* ExtensionArray.swift */,
-				95C8E0001F992EA6004551E9 /* ExtensionDecodable.swift */,
-				95C8E0011F992EA6004551E9 /* ExtensionDictionary.swift */,
-				95C8E0021F992EA6004551E9 /* Gloss.h */,
-				95C8E0031F992EA6004551E9 /* Gloss.swift */,
-				95C8E0041F992EA6004551E9 /* Info.plist */,
-				95C8E0051F992EA6004551E9 /* Operators.swift */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		95C8E0061F992EA6004551E9 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				95C8E0071F992EA6004551E9 /* GlossTests */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		95C8E0071F992EA6004551E9 /* GlossTests */ = {
-			isa = PBXGroup;
-			children = (
-				95C8E0081F992EA6004551E9 /* Comparators.swift */,
-				95C8E0091F992EA6004551E9 /* DecoderTests.swift */,
-				95C8E00A1F992EA6004551E9 /* EncoderTests.swift */,
-				95C8E00B1F992EA6004551E9 /* Fakes */,
-				95C8E00D1F992EA6004551E9 /* FlowObjectCreationTests.swift */,
-				95C8E00E1F992EA6004551E9 /* GlossTests.swift */,
-				95C8E00F1F992EA6004551E9 /* Info.plist */,
-				95C8E0101F992EA6004551E9 /* KeyPathTests.swift */,
-				95C8E0111F992EA6004551E9 /* ObjectToJSONFlowTests.swift */,
-				95C8E0121F992EA6004551E9 /* OperatorTests.swift */,
-				95C8E0131F992EA6004551E9 /* Test Models */,
-			);
-			path = GlossTests;
-			sourceTree = "<group>";
-		};
-		95C8E00B1F992EA6004551E9 /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-				95C8E00C1F992EA6004551E9 /* FakeLogger.swift */,
-			);
-			path = Fakes;
-			sourceTree = "<group>";
-		};
-		95C8E0131F992EA6004551E9 /* Test Models */ = {
-			isa = PBXGroup;
-			children = (
-				95C8E0141F992EA6004551E9 /* TestFailableModel.swift */,
-				95C8E0151F992EA6004551E9 /* TestFailableModelInvalid.json */,
-				95C8E0161F992EA6004551E9 /* TestFailableModelValid.json */,
-				95C8E0171F992EA6004551E9 /* TestKeyPathModel.swift */,
-				95C8E0181F992EA6004551E9 /* TestKeyPathModelCustomDelimiter.swift */,
-				95C8E0191F992EA6004551E9 /* TestModel.json */,
-				95C8E01A1F992EA6004551E9 /* TestModel.swift */,
-				95C8E01B1F992EA6004551E9 /* TestNestedKeyPathModel.swift */,
-				95C8E01C1F992EA6004551E9 /* TestNestedModel.swift */,
-				95C8E01D1F992EA6004551E9 /* TestUnknownTypeModel.json */,
-				95C8E01E1F992EA6004551E9 /* TestUnknownTypeModel.swift */,
-			);
-			path = "Test Models";
 			sourceTree = "<group>";
 		};
 		95C8E0501F9A1E67004551E9 /* Resources */ = {
@@ -520,12 +330,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 95C8DFE51F992EA6004551E9 /* Products */;
-					ProjectRef = 95C8DFE41F992EA6004551E9 /* Gloss.xcodeproj */;
-				},
-				{
-					ProductGroup = 95C8DFF61F992EA6004551E9 /* Products */;
-					ProjectRef = 95C8DFF51F992EA6004551E9 /* GlossExample.xcodeproj */;
+					ProductGroup = 953D42A71FA016BA00192CAD /* Products */;
+					ProjectRef = 953D42A61FA016BA00192CAD /* Gloss.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -538,46 +344,39 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		95C8E0251F992EA7004551E9 /* Gloss.framework */ = {
+		953D42AF1FA016BA00192CAD /* Gloss.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Gloss.framework;
-			remoteRef = 95C8E0241F992EA7004551E9 /* PBXContainerItemProxy */;
+			remoteRef = 953D42AE1FA016BA00192CAD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		95C8E0271F992EA7004551E9 /* Gloss.framework */ = {
+		953D42B11FA016BA00192CAD /* Gloss.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Gloss.framework;
-			remoteRef = 95C8E0261F992EA7004551E9 /* PBXContainerItemProxy */;
+			remoteRef = 953D42B01FA016BA00192CAD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		95C8E0291F992EA7004551E9 /* Gloss.framework */ = {
+		953D42B31FA016BA00192CAD /* Gloss.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Gloss.framework;
-			remoteRef = 95C8E0281F992EA7004551E9 /* PBXContainerItemProxy */;
+			remoteRef = 953D42B21FA016BA00192CAD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		95C8E02B1F992EA7004551E9 /* Gloss.framework */ = {
+		953D42B51FA016BA00192CAD /* Gloss.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Gloss.framework;
-			remoteRef = 95C8E02A1F992EA7004551E9 /* PBXContainerItemProxy */;
+			remoteRef = 953D42B41FA016BA00192CAD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		95C8E02D1F992EA7004551E9 /* GlossTests.xctest */ = {
+		953D42B71FA016BA00192CAD /* GlossTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = GlossTests.xctest;
-			remoteRef = 95C8E02C1F992EA7004551E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		95C8E0301F992EA7004551E9 /* GlossExample.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = GlossExample.app;
-			remoteRef = 95C8E02F1F992EA7004551E9 /* PBXContainerItemProxy */;
+			remoteRef = 953D42B61FA016BA00192CAD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -669,22 +468,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		95C8DFEA1F992EA6004551E9 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				95C8DFEB1F992EA6004551E9 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		95C8DFEC1F992EA6004551E9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				95C8DFED1F992EA6004551E9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		95FB5D011F603D9000628D43 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -743,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -793,7 +576,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -807,6 +590,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MetaMerge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = DXC.MetaMerge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -821,6 +605,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MetaMerge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = DXC.MetaMerge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -873,7 +658,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DXC.MetaMergeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = MetaMerge;
 			};
 			name = Debug;
@@ -887,7 +672,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DXC.MetaMergeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = MetaMerge;
 			};
 			name = Release;
