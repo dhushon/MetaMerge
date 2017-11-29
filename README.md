@@ -31,4 +31,5 @@ MetaMerge has been built in Swift 4.0 using the new Encoder/Decoder -> Codable s
 - buildout graphical controller
 - test image loading w/ box overlays
 - provide image scaling services alongside re-sizing the declared boxes
+- concentrate coders/decoders under a more consistent file structure/strategy -> right now the A->B, A->C, B->C structures/strategies are messy (multi-file changes)
 
