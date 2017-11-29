@@ -93,13 +93,14 @@ class ViewController: NSViewController, NSBrowserDelegate {
         return allowed
     }
     
-    func ingestFiles (urls: [URL]) {
+    func ingestFiles (urls: [URL]) throws {
         // add new selections to combo box
-        let parser = VOCXMLParser();
+        let parser = VOCXMLParser()
         for uri in self.urls {
-            _ = MetaFile(metaURI: uri);
-            let vo : VOCElement = parser.decode(url: uri)!;
-            print("Processed \(vo)" );
+            _ = MetaFile(metaURI: uri)
+            try parser.decode(url: uri)
+            let vo = parser.getParsed()
+            print("Processed \(String(describing: vo))")
         }
     }
     @IBOutlet weak var fileCount: NSTextField!

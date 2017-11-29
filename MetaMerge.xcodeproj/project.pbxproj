@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		950DE43F1FA22EA3000A6350 /* VOCParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DE43E1FA22EA3000A6350 /* VOCParser.swift */; };
 		952135711F97E72300F0226A /* VOCXMLParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952135701F97E72300F0226A /* VOCXMLParserTests.swift */; };
-		959361881F9FDBA600410C5E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 959361861F9FDBA600410C5E /* Info.plist */; };
+		953D42BA1FA0CC1D00192CAD /* StreamHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D42B91FA0CC1D00192CAD /* StreamHandler.swift */; };
+		9547A4011FABA9C40091E33E /* TensorBoxTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 9547A4001FABA9C40091E33E /* TensorBoxTest.json */; };
+		9547A40C1FABAE940091E33E /* TensorBoxTestv2.json in Resources */ = {isa = PBXBuildFile; fileRef = 9547A40B1FABAE940091E33E /* TensorBoxTestv2.json */; };
+		9547A40E1FACDDC20091E33E /* TensorBoxJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9547A40D1FACDDC20091E33E /* TensorBoxJSON.swift */; };
+		957E6E0B1FB3CE8A006743E7 /* TensorBoxDecoderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957E6E0A1FB3CE8A006743E7 /* TensorBoxDecoderTest.swift */; };
+		9587AEAD1FC3121300AFA091 /* XMLDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587AEAC1FC3121300AFA091 /* XMLDictionaryParser.swift */; };
 		959361891F9FDBA600410C5E /* MetaMergeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959361871F9FDBA600410C5E /* MetaMergeUITests.swift */; };
 		95BD76CF1F7B1957009AE6A4 /* VOCJSONDecoderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD76CE1F7B1957009AE6A4 /* VOCJSONDecoderTest.swift */; };
 		95C8E0361F9A1D88004551E9 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8E0341F9A1D88004551E9 /* Resource.swift */; };
@@ -35,41 +41,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		953D42AE1FA016BA00192CAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 953D42A61FA016BA00192CAD /* Gloss.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DC39BF611B8A7AD200088CE0;
-			remoteInfo = Gloss;
-		};
-		953D42B01FA016BA00192CAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 953D42A61FA016BA00192CAD /* Gloss.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DCF3008A1BDCA3FF003FBF15;
-			remoteInfo = "Gloss MacOS";
-		};
-		953D42B21FA016BA00192CAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 953D42A61FA016BA00192CAD /* Gloss.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A04168E71C0DF69900269A6A;
-			remoteInfo = "Gloss tvOS";
-		};
-		953D42B41FA016BA00192CAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 953D42A61FA016BA00192CAD /* Gloss.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DC683ADB1C2C615D0035EAC3;
-			remoteInfo = "Gloss watchOS";
-		};
-		953D42B61FA016BA00192CAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 953D42A61FA016BA00192CAD /* Gloss.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2FA4CE9A1C947E3000EB8AB8;
-			remoteInfo = GlossTests;
-		};
 		95FB5D0A1F603D9000628D43 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 95FB5CF01F603D8F00628D43 /* Project object */;
@@ -87,9 +58,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		950DE43E1FA22EA3000A6350 /* VOCParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VOCParser.swift; sourceTree = "<group>"; };
 		952135701F97E72300F0226A /* VOCXMLParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VOCXMLParserTests.swift; sourceTree = "<group>"; };
-		953D42A61FA016BA00192CAD /* Gloss.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Gloss.xcodeproj; path = ../../work/Gloss2/Gloss/Gloss.xcodeproj; sourceTree = "<group>"; };
+		953D42B91FA0CC1D00192CAD /* StreamHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamHandler.swift; sourceTree = "<group>"; };
 		9541B4671F97DEB400ACD4BF /* lepage-170604-DGP-9916.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lepage-170604-DGP-9916.jpg"; sourceTree = "<group>"; };
+		9547A4001FABA9C40091E33E /* TensorBoxTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TensorBoxTest.json; sourceTree = "<group>"; };
+		9547A40B1FABAE940091E33E /* TensorBoxTestv2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TensorBoxTestv2.json; sourceTree = "<group>"; };
+		9547A40D1FACDDC20091E33E /* TensorBoxJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorBoxJSON.swift; sourceTree = "<group>"; };
+		957E6E0A1FB3CE8A006743E7 /* TensorBoxDecoderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorBoxDecoderTest.swift; sourceTree = "<group>"; };
+		9587AEAC1FC3121300AFA091 /* XMLDictionaryParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLDictionaryParser.swift; sourceTree = "<group>"; };
 		959361861F9FDBA600410C5E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		959361871F9FDBA600410C5E /* MetaMergeUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaMergeUITests.swift; sourceTree = "<group>"; };
 		95BD76CE1F7B1957009AE6A4 /* VOCJSONDecoderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOCJSONDecoderTest.swift; sourceTree = "<group>"; };
@@ -137,24 +114,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		953D42A71FA016BA00192CAD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				953D42AF1FA016BA00192CAD /* Gloss.framework */,
-				953D42B11FA016BA00192CAD /* Gloss.framework */,
-				953D42B31FA016BA00192CAD /* Gloss.framework */,
-				953D42B51FA016BA00192CAD /* Gloss.framework */,
-				953D42B71FA016BA00192CAD /* GlossTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		9541B4631F97DE0D00ACD4BF /* images */ = {
 			isa = PBXGroup;
 			children = (
-				9541B4671F97DEB400ACD4BF /* lepage-170604-DGP-9916.jpg */,
 				95C8E0481F9A1E04004551E9 /* lepage-170604-DGP-9916.json */,
 				95C8E0491F9A1E04004551E9 /* lepage-170604-DGP-9916.xml */,
+				9541B4671F97DEB400ACD4BF /* lepage-170604-DGP-9916.jpg */,
+				9547A4001FABA9C40091E33E /* TensorBoxTest.json */,
+				9547A40B1FABAE940091E33E /* TensorBoxTestv2.json */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -162,7 +129,6 @@
 		95BD76E51F7B1F67009AE6A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				953D42A61FA016BA00192CAD /* Gloss.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -205,9 +171,13 @@
 				95FB5D011F603D9000628D43 /* Main.storyboard */,
 				95FB5D041F603D9000628D43 /* Info.plist */,
 				95FB5D261F605BB100628D43 /* MetaFile.swift */,
+				950DE43E1FA22EA3000A6350 /* VOCParser.swift */,
 				95D8E5481F6180B5004916A6 /* VOCXMLParser.swift */,
-				95D844141F7887FE0051EEEC /* VOCJSONParser.swift */,
+				9587AEAC1FC3121300AFA091 /* XMLDictionaryParser.swift */,
 				95D8E54A1F61B242004916A6 /* VisualObject.swift */,
+				9547A40D1FACDDC20091E33E /* TensorBoxJSON.swift */,
+				95D844141F7887FE0051EEEC /* VOCJSONParser.swift */,
+				953D42B91FA0CC1D00192CAD /* StreamHandler.swift */,
 			);
 			path = MetaMerge;
 			sourceTree = "<group>";
@@ -219,6 +189,7 @@
 				95C8E0501F9A1E67004551E9 /* Resources */,
 				95FB5D0D1F603D9000628D43 /* MetaMergeTests.swift */,
 				95FB5D0F1F603D9000628D43 /* Info.plist */,
+				957E6E0A1FB3CE8A006743E7 /* TensorBoxDecoderTest.swift */,
 				95BD76CE1F7B1957009AE6A4 /* VOCJSONDecoderTest.swift */,
 				952135701F97E72300F0226A /* VOCXMLParserTests.swift */,
 			);
@@ -297,7 +268,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Dan Hushon";
 				TargetAttributes = {
 					95FB5CF71F603D8F00628D43 = {
@@ -328,12 +299,6 @@
 			mainGroup = 95FB5CEF1F603D8F00628D43;
 			productRefGroup = 95FB5CF91F603D8F00628D43 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 953D42A71FA016BA00192CAD /* Products */;
-					ProjectRef = 953D42A61FA016BA00192CAD /* Gloss.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				95FB5CF71F603D8F00628D43 /* MetaMerge */,
@@ -342,44 +307,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		953D42AF1FA016BA00192CAD /* Gloss.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Gloss.framework;
-			remoteRef = 953D42AE1FA016BA00192CAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		953D42B11FA016BA00192CAD /* Gloss.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Gloss.framework;
-			remoteRef = 953D42B01FA016BA00192CAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		953D42B31FA016BA00192CAD /* Gloss.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Gloss.framework;
-			remoteRef = 953D42B21FA016BA00192CAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		953D42B51FA016BA00192CAD /* Gloss.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Gloss.framework;
-			remoteRef = 953D42B41FA016BA00192CAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		953D42B71FA016BA00192CAD /* GlossTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GlossTests.xctest;
-			remoteRef = 953D42B61FA016BA00192CAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		95FB5CF61F603D8F00628D43 /* Resources */ = {
@@ -397,6 +324,8 @@
 			files = (
 				95C8E04E1F9A1E04004551E9 /* lepage-170604-DGP-9916.xml in Resources */,
 				95C8E04B1F9A1E04004551E9 /* lepage-170604-DGP-9916.json in Resources */,
+				9547A4011FABA9C40091E33E /* TensorBoxTest.json in Resources */,
+				9547A40C1FABAE940091E33E /* TensorBoxTestv2.json in Resources */,
 				95C8E0531F9A1EF0004551E9 /* lepage-170604-DGP-9916.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,7 +337,6 @@
 				95C8E0561F9A1F08004551E9 /* Info.plist in Resources */,
 				95C8E04F1F9A1E04004551E9 /* lepage-170604-DGP-9916.xml in Resources */,
 				95C8E04C1F9A1E04004551E9 /* lepage-170604-DGP-9916.json in Resources */,
-				959361881F9FDBA600410C5E /* Info.plist in Resources */,
 				95C8E0541F9A1EF1004551E9 /* lepage-170604-DGP-9916.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,7 +349,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				95D8E54B1F61B242004916A6 /* VisualObject.swift in Sources */,
+				9547A40E1FACDDC20091E33E /* TensorBoxJSON.swift in Sources */,
+				9587AEAD1FC3121300AFA091 /* XMLDictionaryParser.swift in Sources */,
+				950DE43F1FA22EA3000A6350 /* VOCParser.swift in Sources */,
 				95FB5CFE1F603D8F00628D43 /* ViewController.swift in Sources */,
+				953D42BA1FA0CC1D00192CAD /* StreamHandler.swift in Sources */,
 				95FB5CFC1F603D8F00628D43 /* AppDelegate.swift in Sources */,
 				95D844151F7887FE0051EEEC /* VOCJSONParser.swift in Sources */,
 				95D8E5491F6180B5004916A6 /* VOCXMLParser.swift in Sources */,
@@ -437,6 +369,7 @@
 				95C8E0361F9A1D88004551E9 /* Resource.swift in Sources */,
 				952135711F97E72300F0226A /* VOCXMLParserTests.swift in Sources */,
 				95BD76CF1F7B1957009AE6A4 /* VOCJSONDecoderTest.swift in Sources */,
+				957E6E0B1FB3CE8A006743E7 /* TensorBoxDecoderTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

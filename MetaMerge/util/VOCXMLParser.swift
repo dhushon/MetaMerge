@@ -46,168 +46,253 @@ import Foundation
  </object>
  </annotation>
  */
-enum VOCXMLelements: String {
-    case annotation = "annotation"
-    case folder = "folder"
-    case filename = "filename"
-    case size = "size"
-    case width = "width"
-    case height = "height"
-    case segmented = "segmented"
-    case object = "object"
-    case name = "name"
-    case bndbox = "bndbox"
-    case xmin = "xmin"
-    case ymin = "ymin"
-    case xmax = "xmax"
-    case ymax = "ymax"
+
+// encode the XML via a navigation down the treed structure values... would love to have a systemic way to do this, but for now we'll take this
+
+protocol CodingKeyXML: CodingKey {
+    
+    static func find(tag: String) -> CodingKeyXML?
 }
 
-protocol VOCParser {
-    func decode(url:URL) -> VOCElement?
+extension CodingUserInfoKey {
+    public static let versionContext: CodingUserInfoKey = CodingUserInfoKey(rawValue: "versionContext")!
+}
+
+public struct VersionContext {
+    public var responseType: String
+    public init(responseType: String) {
+        self.responseType = responseType
+    }
+}
+
+extension Decoder {
+    public var versionContext: VersionContext? { return userInfo[.versionContext] as? VersionContext }
+}
+
+extension JSONDecoder {
+    convenience init(context: VersionContext) {
+        self.init()
+        self.userInfo[.versionContext] = context
+    }
+}
+
+
+extension VOCElementSet {
+    
+    enum CodingKeysXML: String, CodingKeyXML {
+        case image = "annotations"
+        
+        static func find(tag: String) -> CodingKeyXML? {
+            // test tag against self
+            guard let parsingTag: CodingKeyXML? = VOCElementSet.CodingKeysXML(rawValue: tag) else {
+                return VOCElement.CodingKeysXML.find(tag: tag)
+            }
+            return parsingTag
+        }
+    }
+    
+    
+    func encodeXML() -> String? {
+        //open
+        var xmls = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+        //children
+        images.forEach { image in
+            xmls.append(contentsOf: String(describing: image.encodeXML()))
+        }
+        //closure
+        return xmls
+    }
+    
+    public init(from decoder: Decoder) throws {
+        var flag = (decoder.versionContext?.responseType)
+        if (flag == nil) {
+            flag = "json"
+        }
+        switch flag! {
+            case "xml":
+                let container = try decoder.container(keyedBy: CodingKeysXML.self)
+                let imageset = try container.decode([VOCElement].self, forKey: .image)
+                self.init(images: imageset)
+                return
+            default:
+                break
+        }
+        throw VOCParserError.decodeError(desc: "unable to decode VOCElementSet")
+    }
 }
 
 extension VOCElement {
     
-    init?(xml: Any) {
-        self.filename = ""
-        self.folder = ""
-        self.dimensions = Dimensions(dimensions: [0,0])!
-        self.segmented = 0
-        self.vobjects = [vObject?]()
+    enum CodingKeysXML: String, CodingKeyXML {
+        case folder = "folder"
+        case filename = "filename"
+        case size = "size"
+        case width = "width"
+        case height = "height"
+        case segmented = "segmented"
+        case object = "object"
+        
+        static func find(tag: String) -> CodingKeyXML? {
+            // test tag against self
+            guard let parsingTag = VOCElement.CodingKeysXML(rawValue: tag) else {
+                return Object.CodingKeysXML.find(tag: tag)
+            }
+            return parsingTag
+        }
+    }
+    
+    enum DecodingKeysXML: String, CodingKey {
+        case folder = "folder"
+        case filename = "filename"
+        case size = "size"
+        case segmented = "segmented"
+        case objects = "objects"
+    }
+    
+    func encodeXML() -> String? {
+        //open
+        var xmls = "<\(VOCElementSet.CodingKeysXML.image.rawValue)>\n"
+        //children
+        xmls.append(contentsOf: "<\(CodingKeysXML.filename.rawValue)>\(folder)\n")
+        objects.forEach {object in
+            xmls.append(contentsOf: (String(describing: object?.encodeXML())))
+        }
+        //closure
+        xmls.append(contentsOf: "/\(VOCElementSet.CodingKeysXML.image.rawValue)\n")
+        return xmls
     }
 }
+
+extension Object {
+    
+    enum CodingKeysXML: String, CodingKeyXML {
+        case name = "name"
+        case bndbox = "bndbox"
+        
+        static func find(tag: String) -> CodingKeyXML? {
+            // test tag against self
+            guard let parsingTag: CodingKeyXML? = Object.CodingKeysXML(rawValue: tag) else {
+                return BoundingBox.CodingKeysXML.find(tag: tag)
+            }
+            return parsingTag
+        }
+    }
+    
+    func encodeXML() -> String? {
+        
+        //open
+        var xmls = "<\(VOCElement.CodingKeysXML.object.rawValue)>\n"
+        
+        //children
+        xmls.append(contentsOf: "<\(Object.CodingKeysXML.name.rawValue)>\(label)\n")
+        xmls.append(contentsOf: (String(describing: box.encodeXML())))
+        
+        //closure
+        xmls.append(contentsOf: "</\(VOCElement.CodingKeysXML.object.rawValue)>\n")
+        return xmls
+    }
+}
+
 
 extension BoundingBox {
     
-    init ?(xyxy: [Int]) {
-        if (xyxy.count == 4) {
-            self.xmin = xyxy[0]
-            self.ymin = xyxy[1]
-            self.xmax = xyxy[2]
-            self.ymax = xyxy[3]
-        } else {
-            self.xmin = 0
-            self.ymin = 0
-            self.xmax = 0
-            self.ymax = 0
+    // used for encodingXML
+    enum CodingKeysXML: String, CodingKeyXML {
+        case xmin = "xmin"
+        case ymin = "ymin"
+        case xmax = "xmax"
+        case ymax = "ymax"
+        
+        static func find(tag: String) -> CodingKeyXML? {
+            // test tag against self
+            guard let parsingTag: CodingKeyXML? = BoundingBox.CodingKeysXML(rawValue: tag) else {
+                return nil
+            }
+            return parsingTag
         }
     }
-}
-
-extension vObject {
-    init?(name: String, box: BoundingBox) {
-        self.name = name
-        self.box = box
+    
+    func encodeXML() -> String? {
+        
+        //open
+        var xmls = "<\(Object.CodingKeysXML.bndbox.rawValue)>\n"
+        //children
+        xmls.append(contentsOf: "<\(BoundingBox.CodingKeysXML.xmin.rawValue)>\(String(describing: xmin))</\(BoundingBox.CodingKeysXML.xmin.rawValue)>\n")
+        xmls.append(contentsOf: "<\(BoundingBox.CodingKeysXML.ymin.rawValue)>\(String(describing: ymin))</\(BoundingBox.CodingKeysXML.ymin.rawValue)>\n")
+        xmls.append(contentsOf: "<\(BoundingBox.CodingKeysXML.xmax.rawValue)>\(String(describing: xmax))</\(BoundingBox.CodingKeysXML.xmax.rawValue)>\n")
+        xmls.append(contentsOf: "<\(BoundingBox.CodingKeysXML.ymax.rawValue)>\(String(describing: ymax))</\(BoundingBox.CodingKeysXML.ymax.rawValue)>\n")
+        // close
+        xmls.append(contentsOf: "</\(Object.CodingKeysXML.bndbox.rawValue)>\n")
+        return xmls
     }
 }
 
-class VOCXMLParser: NSObject, XMLParserDelegate, VOCParser {
+class VOCXMLParser: VOCParser {
     
-    var parser = XMLParser()
-    var tle = false // top level element found
-    
-    var parsingDoc = false
-    var parsingTag: VOCXMLelements = VOCXMLelements.annotation
-    var visualobjects: [vObject?] = []
-    var vo: VOCElement?
-    
-    //vobjects
-    var name: String = ""
-    var box: [Int] = [0,0,0,0]
+    var vocElementSet: VOCElementSet?
 
-    public func decode(url: URL) -> VOCElement?
+    public func decode(url: URL) throws
     {
         // initializer for next document?
-        parser = XMLParser(contentsOf:(url) as URL)!
-        parser.delegate = self
-        parser.parse()
-        return vo;
-    }
-    
-    func parserDidStartDocument(_ parser: XMLParser) {
-        //new document
-        parsingDoc = true
-        vo = VOCElement(xml: "")
-    }
-    
-    func parserDidEndDocument(_ parser: XMLParser) {
-        // end of document
-        parsingDoc = false
-    }
- 
-    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String])
-    {
-        if (parsingDoc){
-            parsingTag = VOCXMLelements(rawValue:elementName)!
-            switch(parsingTag) { // there should be a way to do an enum match....
-            case .object: // new element in array
-                name = ""
-                box = [0,0,0,0]
-                return
-            default:
-                return
+        do {
+            let parser: XMLDictionaryParser? = try XMLDictionaryParser(contentsOf:(url as URL))
+            let xmlDict = (parser?.getDict())!["root"]!
+            dump(xmlDict)
+            let data = try JSONSerialization.data(withJSONObject: xmlDict)
+            let decoder = JSONDecoder(context: VersionContext(responseType: "xml"))
+            do {
+                let vocElementSet = try decoder.decode(VOCElementSet.self, from: data)
+                self.vocElementSet = vocElementSet
+            } catch {
+                print(error.localizedDescription)
             }
+        } catch {
+            // throw forward the message
+            throw VOCParserError.decodeError(desc: "rethrow \(error)")
+        }
+        return
+    }
+    
+    public func encode(url: URL, voc: VOCElementSet?) throws {
+        // open the file
+        if (url.isFileURL) {
+            //writing
+            do {
+                let xml: String? = voc?.encodeXML()
+                print("\(String(describing: xml))")
+                print("\n")
+                //try text.write(to: url, atomically: false, encoding: .utf8)
+            }
+            catch {/* error handling here */}
+        } else {
+            throw VOCParserError.fileError(desc: "http posts not supported")
         }
     }
     
-    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        parsingTag = VOCXMLelements(rawValue:elementName)!
-        switch(parsingTag) {
-        case .object: // end of object in array
-            vo?.vobjects.append(vObject(name: name, box: BoundingBox(xyxy:box)))
-            return
-        default:
-            return
+    public func encode(url: URL, tbes: TensorBoxElementSet?) throws {
+        // open the file
+        if (url.isFileURL) {
+            //writing
+            do {
+                //let xml: String? = tbes?.encodeXML()
+                //print("\(xml)"
+
+                //try text.write(to: url, atomically: false, encoding: .utf8)
+            }
+            catch {
+                /* error handling here */
+            }
+        } else {
+            throw VOCParserError.fileError(desc: "http posts not supported")
         }
     }
-
-    func parser(_ parser: XMLParser, foundCharacters string: String) {
-        if (string.contains("\n")) { return } // remove carriage returns from parsed strings - hygiene
+    
+    public func encode(outStream: OutputStream, voc: VOCElement?) {
+        //outStream!.scheduleInRunLoop(.mainRunLoop(), forMode: NSDefaultRunLoopMode)
         
-        // find appropriate tag and assign value, cases are elaborated to support all "known" tags, recognizing that 
-        // other tags may need to be added later - at least we can see the missing tags for now
-        switch parsingTag {
-        case .folder:
-            vo?.folder = string
-            break
-        case .filename:
-            vo?.filename.append(_: string)
-            break
-        case .size:
-            break
-        case .width:
-            vo?.dimensions.width = Int(string)!
-            break
-        case .height:
-            vo?.dimensions.height = Int(string)!
-            break
-        case .segmented:
-            vo?.segmented = Int(string)!
-            break
-        case .object:
-            // hit a new object flag --
-            break
-        case .name:
-            name = string
-            break
-        case .bndbox:
-            break
-        case .xmin:
-            box[0] = Int(string)!
-            break
-        case .xmax:
-            box[1] = Int(string)!
-            break
-        case .ymin:
-            box[2] = Int(string)!
-            break
-        case .ymax:
-            box[3] = Int(string)!
-            break
-        default:
-            print("found unknown: \(string) for \(parsingTag)")
-            break
-        }
+    }
+    
+    func getParsed() -> VOCElementSet? {
+        return self.vocElementSet
     }
 }

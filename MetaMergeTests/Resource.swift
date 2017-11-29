@@ -28,10 +28,17 @@ class Resource {
     }
     
     var url: URL {
-        let url: URL = (Bundle(for: Swift.type(of: self))).url(forResource: name, withExtension: type)!
-        return url
-        //let filename: String = (type.isEmpty ? name : "\(name).\(type)")
-        //return URL(string: "file:///\(Resource.resourcePath)/\(filename)")!
+        do {
+            let url: URL? = Bundle(for: Swift.type(of: self)).url(forResource: name, withExtension: type)
+            if (url != nil) {
+                return url!
+            } else {
+                let filename: String = (type.isEmpty ? name : "\(name).\(type)")
+                return URL(string: "file:///\(Resource.resourcePath)/\(filename)")!
+            }
+        } catch {
+            print("URL Error: \(error)")
+        }
     }
         
     var content: String? {

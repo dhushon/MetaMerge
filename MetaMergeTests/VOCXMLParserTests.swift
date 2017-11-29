@@ -24,8 +24,16 @@ class VOCXMLDecoderTest: XCTestCase {
         try XCTAssertTrue(url.checkResourceIsReachable())
         print("XMLURL: \(String(describing: url)) is reachable")
         
-        let voc :VOCElement? = VOCXMLParser().decode(url: url)
-        XCTAssertTrue(voc?.vobjects.count == 3)
+        do {
+            let parser : VOCXMLParser = VOCXMLParser()
+            try parser.decode(url: url)
+            let voc: VOCElementSet? = parser.getParsed()
+            XCTAssertNotNil(voc)
+            let image = voc!.images[0]
+            XCTAssertTrue(image.objects.count == 3)
+        } catch {
+            print("Caught Error: \(error)")
+        }
         print("XMLParse: successfully parsed objects")
     }
     
